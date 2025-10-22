@@ -705,4 +705,25 @@ Centralised digital platform for comprehensive student  activity records for HEI
 </body>
 
 </html>
+<html>
+    <body>
+<!-- Overlay navigation panel -->
+    <div id="navOverlay" class="nav-overlay" aria-hidden="true">
+        <div class="overlay-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
+            <h3 style="margin:0 0 8px 0;color:#1e3a8a">Menu</h3>
+            <div class="overlay-links">
+                <a href="#profile" onclick="closeNav()">Home</a>
+                <a href="events.html" onclick="closeNav()">Event</a>
+                <a href="functions.html" onclick="closeNav()">Function</a>
+                <a href="internship.html" onclick="closeNav()">Internship</a>
+                <a href="research.html" onclick="closeNav()">Research & Development</a>
+                <a href="scholarship.html" onclick="closeNav()">Scholarship</a>
+                <a href="#contact" onclick="closeNav()">Contact</a>
+                <a href="#" onclick="closeNav()" style="color:#dc2626">Close</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
 
