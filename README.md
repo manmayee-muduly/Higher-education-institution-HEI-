@@ -616,4 +616,93 @@ Centralised digital platform for comprehensive student  activity records for HEI
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Internships | Student Activity System</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+            color: #04293a
+        }
+        
+        header {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 18px;
+            text-align: center;
+            font-size: 1.4rem
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 24px auto;
+            padding: 0 16px
+        }
+        
+        .card {
+            background: #fff;
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+            margin-bottom: 16px
+        }
+        
+        .role {
+            font-weight: 700;
+            color: #0b3b82
+        }
+        
+        .details {
+            color: #064679;
+            margin-top: 6px
+        }
+        
+        .apply {
+            display: inline-block;
+            padding: 8px 12px;
+            background: #2563eb;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <header>Internship Opportunities</header>
+    <div class="container">
+        <section class="card">
+            <div class="role">Frontend Development Intern — ABC Tech</div>
+            <div class="details">Duration: 3 months · Stipend: ₹10,000/month · Skills: HTML/CSS/JS, React</div>
+            <p>Work on responsive UI components and college-facing portals. Mentored by senior devs.</p>
+            <a class="apply" href="#" onclick="alert('Apply (demo)')">Apply</a>
+        </section>
+
+        <section class="card">
+            <div class="role">Data Science Intern — Data Labs</div>
+            <div class="details">Duration: 6 months · Stipend: ₹15,000/month · Skills: Python, Pandas, ML</div>
+            <p>Assist in data cleaning, model training and dashboard development for partner NGOs.</p>
+            <a class="apply" href="#" onclick="alert('Apply (demo)')">Apply</a>
+        </section>
+
+        <section class="card">
+            <h3>How to prepare</h3>
+            <ul>
+                <li>Update your resume and GitHub/portfolio links</li>
+                <li>Prepare a short project summary to share with recruiters</li>
+                <li>Attend campus mock interviews and resume workshops</li>
+            </ul>
+        </section>
+
+        <p style="text-align:center;color:#064679">&copy; 2025 Student Activity Platform</p>
+    </div>
+</body>
+
+</html>
 
