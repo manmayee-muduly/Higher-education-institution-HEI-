@@ -1,4 +1,4 @@
-# Higher-education-institution-HEI-
+# Student Activity System
 Centralised digital platform for comprehensive student  activity records for HEIs 
 <!DOCTYPE html>
 <html lang="en">
