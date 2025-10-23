@@ -1202,5 +1202,57 @@ Centralised digital platform for comprehensive student  activity records for HEI
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Links Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .exam-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #3498db;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    a:hover {
+      background-color: #2e86c1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exam Links Portal</h1>
+  <div class="exam-links">
+    <a href="https://www.google.com/search?q=JEE+Main+exam" target="_blank">JEE Main Exam</a>
+    <a href="https://www.google.com/search?q=NEET+exam" target="_blank">NEET Exam</a>
+    <a href="https://www.google.com/search?q=CUET+exam" target="_blank">CUET Exam</a>
+    <a href="https://www.google.com/search?q=GATE+exam" target="_blank">GATE Exam</a>
+    <a href="https://www.google.com/search?q=UPSC+exam" target="_blank">UPSC Exam</a>
+  </div>
+
+</body>
+</html>
 
 
