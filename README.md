@@ -914,6 +914,7 @@ Centralised digital platform for comprehensive student  activity records for HEI
                     <a href="research.html" onclick="closeNav()">Research & Development</a>
                     <a href="internship.html" onclick="closeNav()">Internship</a>
                     <a href="#contact" onclick="closeNav()">Contact</a>
+                    <a href="code1.html" onclick="closeNav()">feedback</a>
                 </div>
             </div>
         </div>
