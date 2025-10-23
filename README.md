@@ -978,6 +978,229 @@ Centralised digital platform for comprehensive student  activity records for HEI
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animated Student Feedback</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .feedback-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            width: 400px;
+            backdrop-filter: blur(8px);
+            animation: fadeInUp 1.2s ease forwards;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 1.2px;
+            animation: colorShift 4s infinite alternate;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            position: relative;
+            margin-bottom: 15px;
+            color: #eee;
+            font-weight: 500;
+            cursor: text;
+            animation: fadeInLeft 1.5s ease forwards;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            box-shadow: 0 0 8px 2px #ffd700;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #fff;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .radio-group {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-around;
+            animation: fadeInRight 1.5s ease forwards;
+        }
+        
+        .radio-group label {
+            font-weight: 400;
+        }
+        
+        .radio-group input[type="radio"] {
+            margin-right: 6px;
+            cursor: pointer;
+        }
+        
+        button {
+            background: #ffd700;
+            border: none;
+            padding: 15px 0;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeInUp 1.8s ease forwards;
+        }
+        
+        button:hover {
+            background-color: #e6c200;
+            transform: scale(1.05);
+        }
+        
+        .note {
+            margin-top: 12px;
+            text-align: center;
+            color: #fff;
+            display: none;
+        }
+        /* Animations */
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes colorShift {
+            0% {
+                color: #ffd700;
+            }
+            50% {
+                color: #fff;
+            }
+            100% {
+                color: #ffd700;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="feedback-container">
+        <h2>Student Website Feedback</h2>
+        <form id="feedbackForm">
+            <label for="name">Name
+				<input type="text" id="name" name="name" placeholder="Your name" required />
+			</label>
+            <label for="email">Email
+				<input type="email" id="email" name="email" placeholder="Your email" required />
+			</label>
+            <div class="radio-group">
+                <label><input type="radio" name="satisfaction" value="Yes" checked /> Satisfied</label>
+                <label><input type="radio" name="satisfaction" value="No" /> Not Satisfied</label>
+            </div>
+            <label for="feedback">Feedback
+				<textarea id="feedback" name="feedback" placeholder="Write your feedback here..." required></textarea>
+			</label>
+            <button type="submit">Submit Feedback</button>
+            <p class="note" id="note">Thanks — your feedback was saved.</p>
+        </form>
+    </div>
+
+    <script>
+        (function() {
+            const form = document.getElementById('feedbackForm');
+            const note = document.getElementById('note');
+
+            function saveFeedback(data) {
+                const key = 'siteFeedback';
+                const store = JSON.parse(localStorage.getItem(key) || '[]');
+                store.push(data);
+                localStorage.setItem(key, JSON.stringify(store));
+            }
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const data = {
+                    name: document.getElementById('name').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    satisfaction: form.satisfaction.value,
+                    feedback: document.getElementById('feedback').value.trim(),
+                    date: new Date().toISOString()
+                };
+
+                saveFeedback(data);
+                note.style.display = 'block';
+                form.reset();
+                setTimeout(() => note.style.display = 'none', 3500);
+            });
+        })();
+    </script>
+</body>
+
+</html>
 
 
